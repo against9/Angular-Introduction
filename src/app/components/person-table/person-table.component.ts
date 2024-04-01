@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {AppComponent} from "../../app.component";
-import {Person} from "../../shared/interfaces/person";
+import {EPerson, ManyPerson, Person} from "../../shared/interfaces/person";
 
 @Component({
   selector: 'app-person-table',
@@ -11,6 +11,8 @@ import {Person} from "../../shared/interfaces/person";
 })
 export class PersonTableComponent {
   @Input() person: Person | undefined
+
+
 
 
 }
