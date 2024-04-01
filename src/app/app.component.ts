@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {PersonTableComponent} from "./components/person-table/person-table.component";
 import {Person} from "./shared/interfaces/person";
 import {EventBindExampleComponent} from "./components/event-bind-example/event-bind-example.component";
@@ -8,28 +8,28 @@ import {EventBindExampleComponent} from "./components/event-bind-example/event-b
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PersonTableComponent, EventBindExampleComponent ],
+  imports: [RouterLink, RouterOutlet, PersonTableComponent, EventBindExampleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  name = "Alexandros";
 
-  person0=
+
+  person0 =
     {
-    givenName: "Alexandros",
-    surName: "Chrisafidis",
-    age: 0x32,
-    email: "cf5@aueb.gr",
-    address:"Athens, Greece"
-  }
-  person1=
+      givenName: "Alexandros",
+      surName: "Chrisafidis",
+      age: 0x32,
+      email: "cf5@aueb.gr",
+      address: "Athens, Greece"
+    }
+  person1 =
     {
       givenName: "John",
       surName: "Giannakis",
       age: 0x32,
       email: "cf3@aueb.gr",
-      address:"London, England"
+      address: "London, England"
     }
 
   users: Person[] = [
